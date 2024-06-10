@@ -1,1 +1,18 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-image: url("https://wallpapercave.com/wp/N3BgXEI.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.full-height {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#domains {
+  color: red;
+  font-weight: bold;
+}

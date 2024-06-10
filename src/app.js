@@ -3,13 +3,15 @@ import "bootstrap";
 import "./style.css";
 
 window.onload = () => {
-  const domains = generateDomains();
   const domainsContainer = document.querySelector("#domains");
-  domains.forEach(domain => {
-    const domainElement = document.createElement("p");
-    domainElement.innerText = domain;
-    domainsContainer.appendChild(domainElement);
-  });
+  const button = document.querySelector("#randomizeButton");
+  function displayRandomDomain() {
+    const domains = generateDomains();
+    const randomIndex = Math.floor(Math.random() * domains.length);
+    domainsContainer.innerText = domains[randomIndex];
+  }
+  button.addEventListener("click", displayRandomDomain);
+  displayRandomDomain();
 };
 function generateDomains() {
   let pronoun = ["the", "our"];
@@ -24,6 +26,5 @@ function generateDomains() {
       }
     }
   }
-
   return domains;
 }
